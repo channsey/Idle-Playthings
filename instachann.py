@@ -6,7 +6,6 @@ import random
 add tags to avoid thirsty smut
 
 Consider specific interactions for select VIP users
-def @irenesophia, nalani_knauss, jaychkunnn
 
 Setup different script for friends with dead accounts
 Those dead accounts will like all my posts >:D
@@ -15,7 +14,7 @@ They'll also comment shit like "u':heart:' Senpai!
 
 """
 # get a session!
-session = InstaPy(username='channsey113', password='psychopass', use_firefox=False, headless_browser=False) 
+session = InstaPy(username='channsey113', password='password', use_firefox=False, headless_browser=False) 
 # let's go! :>
 with smart_run(session):
     # settings
@@ -32,12 +31,12 @@ with smart_run(session):
     session.set_skip_users(skip_private=False, private_percentage=100)
 
     # completely ignore liking images from certain users
-    session.set_ignore_users(['ssuteaclub'])
+    session.set_ignore_users(['fake_friend'])
 
     # will prevent commenting on and unfollowing your good friends (the images will
     # still be liked)
     # include good friends and tinders
-    session.set_dont_include(['irensophia', 'nalani_knauss', 'jaychkunnn', 'a.quon', 'vivv_sanchez', 'stuhtingray','gdlaave'])
+    session.set_dont_include(['best_buddy'])
 
     session.set_do_like(enabled=True, percentage=100)
 
@@ -81,6 +80,4 @@ with smart_run(session):
     # previously known to go by interact's amount
     # session.set_user_interact(amount=num, randomize=True, percentage=100, media='Photo')
     # The VIP Lounge
-    session.interact_by_users(['stuhtingray'], amount=num, randomize=True, media='Photo')
-    #session.interact_by_users(['nalani_knauss'], amount=num, randomize=True, media='Photo')
-    #session.interact_by_users(['irensophia'], amount=num, randomize=True, media='Photo')
+    session.interact_by_users(['best_buddy'], amount=num, randomize=True, media='Photo')
